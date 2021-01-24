@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="images/u-1.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+    </style>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Oswald&family=Roboto&display=swap');
+    </style>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,500&display=swap');
+    </style>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    </style>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+    </style>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Gorditas:wght@700&display=swap');
+    </style>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Acme&family=Gorditas:wght@700&display=swap');
+    </style>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@1,700&display=swap');
+    </style>
+    <style type="text/css">
+    .navbar-collapse {padding-left: 16px;}
+    @media (max-width: 900) {
+    #hello{
+    padding: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    }
+    }
+    .bg-light {
+    background-color: lavender!important;
+    }
+    #mon,#tue,#wed,#thu,#fri,#sat,#sun{
+    padding-bottom: 15px ;
+    }
+    .nav-tabs .nav-item {
+    background-color: blanchedalmond!important;
+    border-left: 2px solid #C2A060;
+    }
+    h1{
+    font-size: 4vw;
+    color: #368228;
+    }
+    .carousel-inner img{
+    width: 100%;
+    position:relative;
+    background-size: cover;
+    
+    }
+    #image-1,#image-2{
+    border-radius: 20px !important;
+    }
+    #headingDownload{
+    color: #a2bafff7 !important;
+    font-family: 'Titillium Web', sans-serif !important;
+    }
+    #login {
+      height: 90%;
+      margin-top: 2%;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      @media (min-width: 566px) and (max-width: 781px){
+        .headingsize{
+          font-size: 20px;
+        }
+      }
+    </style>
+    <script type="text/javascript">
+    function show(f1,f2) {
+    document.getElementById(f1).style.display='block';
+    document.getElementById(f2).style.display='none';
+    // document.getElementById(f1).target.className="active";
+    //  document.getElementById(f2).style.display='none';
+    /*var elems = document.querySelector(".active");
+    if(elems !==null){
+    elems.classList.remove("active");}
+    var qs=document.querySelector(f1);
+    
+    qs.classList.add("active");*/
+    }
+    </script>
+    <title>HS GYM</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark navbar-expand-lg pb-0 pt-1 sticky-top" style="background-color: #3a3f55 !important;">
+      <div class="container-fluid border-danger">
+        <a class="navbar-brand m-0" href="#frontpage" style="font-size: 28px !important;color: #ff9031 !important;">𝖍𝖘</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContents">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContents">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#frontpage" onclick="show('frontpage','hello')">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page"  href="#hello" onclick="show('hello','frontpage')">            Schedule</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#myModal" style="cursor: pointer;">Services</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link text-danger" data-toggle="modal" data-target="#signup" style="cursor: pointer;"><span class="fas fa-user"></span> ✍ Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-primary" data-toggle="modal" data-target="#login" style="cursor: pointer;"><span class="fas fa-sign-in-alt"></span> 🔐 Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title text-info">Services</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            Sorry for inconvenience..
+          </div>
+          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal" id="signup">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          
+          <!-- Modal Header -->
+          <div class="modal-header text-center">
+            <h2 class="modal-title text-info w-100">Sign up</h2>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form>
+               <div class="form-group">
+                 <input type="email" class="form-control" name="useremail" placeholder="Email">
+               </div>
+               <div class="form-group">
+                 <input type="password" class="form-control" name="userpassword" placeholder="Password">
+               </div>
+               <div class="form-group">
+                 <input type="password" class="form-control" name="userpassword" placeholder="Confirm Password">
+               </div>
+               <div class="form-inline">
+                <label class="form-check-label mr-2">Phone No.</label>
+                 <input type="number" max="10" class="form-control" name="userpassword" placeholder="123XXXX">
+               </div>
+               <div class="form-group">
+                 <label class="form-check-label ml-4 mt-2">
+                 <input class="form-check-input" type="checkbox" checked="checked"><a href="" class="text-success">Terms & Condition</a>
+                 </label>
+               </div>
+               <div class="container text-center mt-3">
+                <button type="submit" class="btn btn-primary ">Submit</button>
+               </div>
+            </form>
+          </div>
+          
+          <!-- Modal footer -->
+          
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="modal " id="login">
+      <div class="modal-dialog ">
+        <div class="modal-content">
+          
+          <!-- Modal Header -->
+          <div class="modal-header text-center">
+            <h2 class="modal-title text-info w-100">Login</h2>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form>
+               <div class="form-group">
+                 <input type="email" class="form-control" name="useremail" placeholder="Email">
+               </div>
+               <div class="form-group">
+                 <input type="password" class="form-control" name="userpassword" placeholder="Password">
+               </div>
+               <div class="form-group form-check ">
+                 
+                 <label class="form-check-label">
+                 <input class="form-check-input" type="checkbox" checked="checked"> Remember me
+                 </label>
+                 <a href="" class="text-success float-right">Forget Password?</a>
+                 
+               </div>
+               <div class="container text-center ">
+                <button type="submit" class="btn btn-primary ">Submit</button>
+               </div>
+            </form>
+          </div>
+          
+          <!-- Modal footer -->
+         <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>-->
+          
+        </div>
+      </div>
+    </div>
+
+    <div id="frontpage" >
+      <div style="background-color: black">
+        <div class="container p-0  py-4">
+          <div class="carousel slide carousel-fade" id="myslide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/ph-1.jpg" alt="no image">
+              </div>
+              <div class="carousel-item ">
+                <img src="images/ph-2.jpg" alt="no image">
+              </div>
+              <div class="carousel-item ">
+                <img src="images/ph-3.jpg" alt="no image">
+              </div>
+            </div>
+            
+            <ul class="carousel-indicators">
+              <li data-target="#myslide" data-slide-to="0" class="active"></li>
+              <li data-target="#myslide" data-slide-to="1" ></li>
+              <li data-target="#myslide" data-slide-to="2" ></li>
+            </ul>
+            
+            <a href="#myslide" data-slide="prev" class="carousel-control-prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a href="#myslide" data-slide="next" class="carousel-control-next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-2 mb-5">
+        <h2 id="headingcustomer" class="text-center display-3 font-weight-bold mt-5" style="color: #746815 !important; font-family: 'Lobster', cursive !important;">Some of our Satisfied Customer</h2>
+        <div class="card-deck mt-3 mb-4">
+          <div class="card bg-primary">
+            <img class="card-img-top" src="images/r1.jpg" alt="card image">
+            <div class="card-body font-weight-bolder text-center">
+              Dwayne Douglas Johnson
+            </div>
+          </div>
+          <div class="card bg-success">
+            <img class="card-img-top" src="images/r2.jpg" alt="card image">
+            <div class="card-body font-weight-bolder text-center">
+              Roman Reigns
+            </div>
+          </div>
+          <div class="card bg-secondary">
+            <img class="card-img-top" src="images/r3.jpg" alt="card image">
+            <div class="card-body font-weight-bolder text-center">
+              Vidyut Jamwal
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container-fluid mx-0 bg-dark py-3">
+        <div class="d-flex text-light flex-wrap justify-content-around">
+          <div class="py-2"><h3>96+ gyms</h3></div>
+          <div class="py-2"><h3>10+ countries</h3></div>
+          <div class="py-2"><h3>24/7 services</h3></div>
+          <div class="py-2"><h3>Mobile app</h3></div>
+          <div class="py-2"><h3>Personal guidence</h3></div>
+        </div>
+      </div>
+      <div class="container-fluid mt-4 py-4">
+        <h2 class="display-4 font-weight-bold text-center" style="font-family: 'Fraunces', serif !important; color: #a36631 !important;">Why Join Us?</h2>
+        <div class="d-flex flex-row justify-content-around">
+          <div>
+            <img src="images/s-1.jpg" class="img-fluid">
+          </div>
+          <div>
+            <img src="images/s-2.jpg" class="img-fluid">
+          </div>
+          <div>
+            <img src="images/s-3.jpg" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <!-- <div class="container-fluid mt-4 pt-4 text-center bg-dark">
+        <div><h2 id="headingDownload" class="display-4 font-weight-bolder" style="font-family: 'Pacifico', cursive;">Download our app</h2></div>
+        <div class="d-flex mt-4 justify-content-around pb-3">
+          <div class="px-2"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.google.android.apps.fitness&hl=en&gl=US"><img id="image-1" class="img-fluid " src="d-1.jpg"></a></div>
+          <div class="px-2"><a target="_blank" href="https://apps.apple.com/us/app/fitness/id1208224953"><img id="image-2" class="img-fluid " src="d-2.jpg"></a></div>
+        </div>
+      </div>-->
+      <div class="container-fluid mt-4 pt-4 text-center bg-dark pb-3 py-4 mb-4">
+        <div><h2 id="headingDownload" class="display-4 font-weight-bolder" style="font-family: 'Pacifico', cursive;">Our Pricing</h2></div>
+        <div class="card-deck mt-3 mb-4 ">
+          <div class="card bg-danger" style="border: 2px solid #00ff6d;box-shadow: 5px 2px 7px 0px black;">
+            <div  id="card1" class="card-header text-center  font-weight-bolder" style="font-family: 'Noticia Text', serif !important;" ><h2 class="headingsize">5 Month</h2></div>
+            <div class="card-body font-weight-bolder text-center mx-1 bg-light" >
+              ₹1999 per month
+            </div>
+          </div>
+          <div class="card bg-danger" style="border: 2px solid #00ff6d;box-shadow: 5px 2px 7px 0px black;">
+            <div id="card2" class="card-header text-center" style="font-family: 'Noticia Text', serif !important;" ><h2 class="headingsize">3 Month</h2></div>
+            <div class="card-body font-weight-bolder text-center mx-1 bg-light">
+              ₹1599 per month
+            </div>
+          </div>
+          <div class="card bg-danger" style="border: 2px solid #00ff6d; box-shadow: 5px 2px 7px 0px black;">
+            <div id="card3" class="card-header text-center" style="font-family: 'Noticia Text', serif !important;" ><h2 class="headingsize">2 Month</h2></div>
+            <div class="card-body font-weight-bolder text-center mx-1 bg-light">
+              ₹999 per month
+            </div>
+          </div>
+          <div id="card4" class="card bg-danger" style="border: 2px solid #00ff6d;box-shadow: 5px 2px 7px 0px black;">
+            <div class="card-header text-center" style="font-family: 'Noticia Text', serif !important;" ><h2 class="headingsize">1 Month</h2></div>
+            <div class="card-body font-weight-bolder text-center mx-1 bg-light">
+              ₹699 per month
+            </div>
+          </div>
+        </div>
+        <div class="align-content-center " style="cursor: pointer !important;">
+          <a href="#signup" class="text-success">  <h3>Join Now 🢖🢖🢖</h3>  </a>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="container-fluid  mt-4 mb-0 pb-4 pt-4" style="background-image: linear-gradient(180deg, #151219f0, #87ae6dc7) !important;">
+        <div class="card-deck justify-content-around">
+          <div class="card bg-transparent pt-4 border-0 pl-4">
+            
+            <div class="d-flex flex-column ">
+              <div class=" ml-4 pl-4"><h5 id="headingDownload" class="font-weight-bolder" style="font-family: 'Pacifico', cursive;">Download app</h5></div>
+              <div class="py-1  ml-4 pl-4"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.google.android.apps.fitness&hl=en&gl=US"><img id="image-1" class="img-fluid align-content-center" src="images/d-1.jpg"></a></div>
+              <div class="ml-4 pl-4" ><a target="_blank" href="https://apps.apple.com/us/app/fitness/id1208224953"><img id="image-2" class="img-fluid " src="images/d-2.jpg"></a></div>
+            </div>
+          </div>
+          <div class="card bg-transparent pt-4 border-0">
+            <div class="container  py-2">
+              <div class="d-flex justify-content-center">
+                <div class="font-weight-bolder pr-3">Follow us: </div>
+                <div class="px-2"><a href="https://www.instagram.com/?hl=en" target="_blank" style="box-shadow: 1px 8px 6px 0px black;"><img src="images/f1.jpg" style="border-radius: 8px !important; style="border: 2px solid #00ff6d;box-shadow: 5px 2px 7px 0px black;""></a></div>
+                <div class="px-2"><a href="https://www.facebook.com/" target="_blank" style="box-shadow: 1px 8px 6px 0px black;"><img src="images/f2.jpg" style="border-radius: 8px !important;"></a></div>
+                <div class="px-2"><a href="https://twitter.com/?lang=en" target="_blank" style="box-shadow: 1px 8px 6px 0px black;"><img src="images/f3.jpg" style="border-radius: 8px !important;"></a></div>
+                <!--<div class="px-2"><a href="https://twitter.com/?lang=en" target="_blank" style="box-shadow: 1px 8px 6px 0px black;"><img src="f4.jpg" style="border-radius: 8px !important;"></a></div>-->
+                <div class="px-2"><a href="https://in.linkedin.com/" target="_blank" style="box-shadow: 1px 8px 6px 0px black;"><img src="images/f5.jpg" style="border-radius: 8px !important;"></a></div>
+              </div>
+            </div>
+            <div class="container  mb-0">
+              <h5 class="text-center pb-0 pt-1 mb-0" style="font-family: 'Kaushan Script', cursive !important;">#Made in India</h5>
+              <h5 class="text-center pt-0 mt-0" style="font-family: 'Kaushan Script', cursive !important;">Made by Harshit Shukla</h5>
+            </div>
+            <div class="container-fluid ">
+              <h6 class="text-center" style="color: black !important;"> &#169; Copyright 2021 HS GYM pvt. ltd.</h6>
+            </div>
+          </div>
+          <div class="card bg-transparent pt-4 border-0">
+            <h5 class="text-center">Contact us:</h5>
+            <h6 class="text-center">📧 example@gmail.com</h6>
+            <h6 class="text-center">🕿 +911234567890</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="hello" class="container mt-3 mb-3 " style=" display: none;padding-left: 2px !important; padding-right: 0px !important;">
+      
+      <br>
+      <!-- Nav tabs -->
+      
+      <ul id="navtabbar" class="nav nav-tabs">
+        <li class="nav-item" style="border-left: 0px !important">
+          <a class="nav-link active" data-toggle="tab" href="#mon">Monday</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#tue">Tuesday</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#wed">Wednesday</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#thu">Thursday</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#fri">Friday</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#sat">Saturday</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#sun">Sunday</a>
+        </li>
+      </ul>
+      
+      <!-- Tab panes -->
+      <div class="tab-content bg-light p-0">
+        <div id="mon" class="container tab-pane active w-75"><br>
+          <div class="container pl-5 pr-5 ">
+            <h1 class="text-center mt-3" >Excercise - 1</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 2</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 3</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 4</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+          </div>
+        </div>
+        <div id="tue" class="container tab-pane fade w-75"><br>
+          <div class="container pl-5 pr-5 ">
+            <h1 class="text-center mt-3" >Excercise - 1</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 2</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 3</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 4</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+          </div>
+        </div>
+        <div id="wed" class="container tab-pane fade w-75"><br>
+          <div class="container pl-5 pr-5 ">
+            <h1 class="text-center mt-3" >Excercise - 1</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 2</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 3</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 4</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+          </div>
+        </div>
+        <div id="thu" class="container tab-pane fade w-75"><br>
+          <div class="container pl-5 pr-5 ">
+            <h1 class="text-center mt-3" >Excercise - 1</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 2</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 3</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 4</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+          </div>
+        </div>
+        <div id="fri" class="container tab-pane fade w-75"><br>
+          <div class="container pl-5 pr-5 ">
+            <h1 class="text-center mt-3" >Excercise - 1</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 2</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 3</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 4</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+          </div>
+        </div>
+        <div id="sat" class="container tab-pane fade w-75"><br>
+          <div class="container pl-5 pr-5 ">
+            <h1 class="text-center mt-3" >Excercise - 1</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 2</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 3</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 4</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+          </div>
+        </div>
+        <div id="sun" class="container tab-pane fade w-75"><br>
+          <div class="container pl-5 pr-5 ">
+            <h1 class="text-center mt-3" >Excercise - 1</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 2</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 3</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+            <h1 class="text-center mt-4">Excercise - 4</h1>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0NzJ3zyJ_k"></iframe>
+            </div>
+          </div>    </div>
+        </div>
+        
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    </body>
+  </html>
