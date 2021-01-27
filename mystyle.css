@@ -1,0 +1,49 @@
+.navbar-collapse {padding-left: 16px;}
+    @media (max-width: 900) {
+    #hello{
+    padding: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    }
+    }
+    .bg-light {
+    background-color: lavender!important;
+    }
+    #mon,#tue,#wed,#thu,#fri,#sat,#sun{
+    padding-bottom: 15px ;
+    }
+    .nav-tabs .nav-item {
+    background-color: blanchedalmond!important;
+    border-left: 2px solid #C2A060;
+    }
+    h1{
+    font-size: 4vw;
+    color: #368228;
+    }
+    .carousel-inner img{
+    width: 100%;
+    position:relative;
+    background-size: cover;
+    
+    }
+    #image-1,#image-2{
+    border-radius: 20px !important;
+    }
+    #headingDownload{
+    color: #a2bafff7 !important;
+    font-family: 'Titillium Web', sans-serif !important;
+    }
+    #login {
+      height: 90%;
+      margin-top: 2%;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      @media (min-width: 566px) and (max-width: 781px){
+        .headingsize{
+          font-size: 20px;
+        }
+      }
